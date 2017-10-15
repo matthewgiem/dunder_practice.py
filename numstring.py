@@ -12,7 +12,7 @@ class numString:
         return float(self.value)
 
     def __add__(self, other):
-        if '.' in self.value:
+        if '.' in self.value or isinstance(other, float):
             return float(self) + float(other)
         else:
             return int(self) + int(other)
